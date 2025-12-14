@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Project</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+  <h1> Async Project</h1>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  // this is handler of the settimeout
+  const hi = function() {
+    console.log('Deepak')
+  }
+  const changeText = function() {
+    document.querySelector('h1').innerHTML = "best series of the all time"
+  }
+  const changeme = setTimeout(changeText, 2000); // settimeout function will not stop working as if it is stored in a variable
+
+  document.querySelector('#stop').addEventListener('click', () => {
+    clearTimeout(changeme) // it will stop settimeout to excute
+  })
+</script>
+
+</html>
