@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html Events</title>
+</head>
+
+<body style="background-color: #212121;">
+  <div class="images">
+    <ul class="image-container" style="background-color: #121212; color: white;">
+      <li>This is first list</li>
+      <li>This is second list</li>
+      <li>This is thirdlist</li>
+      <li>This is fourth list</li>
+      <li>This is fifth list</li>
+      <li>This is seix list</li>
+      <li>This is seven list</li>
+      <li>This is eight list</li>
+      <li>This is nine list</li>
+      <li>This is ten list</li>
+      <li>This is eleven list</li>
+      <li>This is twelve list</li>
+      <li>This is thirteen list</li>
+    </ul>
+  </div>
+  <script>
+    let btns = document.getElementsByClassName('image-container');
+
+    // selecting each element of class object 
+    for (let btn of btns) {
+      btn.addEventListener("click", (e) => {
+
+        // targeting one by one li on click
+        const item = e.target
+        console.log(item) // it shows the click li on console
+        item.remove(); // it removes the element clicked
+      });
+    }
+  </script>
+</body>
+
+</html>
